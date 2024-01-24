@@ -8,3 +8,8 @@ def find_root(a, b, eps):
             return find_root(a, mid, eps)
         else:
             return find_root(mid, b, eps)
+        
+a=1
+b=14
+eps=19
+print(find_root(a, b, eps))
