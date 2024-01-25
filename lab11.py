@@ -1,9 +1,13 @@
-def sum(n, p):
-    if n == 0:
-        return 0
-    elif n == 1 and p == 1:
+def recursive_sum(n, p, a):
+    if n == 1:
         return 1
-    elif n == 2 and p == 2:
-        return 2
+    elif n == p:
+        return n
     else:
-        return sum(n - p, p) + sum(n - 1, p)
+        return n + recursive_sum(n - a, p, a)
+
+n = 5
+p = 2
+a = 1
+result = recursive_sum(n, p, a)
+print(f"Сумма чисел от {n} до 1 по формуле sum(n) = sum(n,2) + sum(n-1,2) равна: {result}")

@@ -1,5 +1,8 @@
-def sum(n):
-    if n == 0:
-        return 0
+def sum_recursive(n):
+    if n == 1:
+        return 1
     else:
-        return sum(n - 1) + n
+        return n + sum_recursive(n - 1)
+
+n = int(input(15))
+print(f 1{n}{sum_recursive(n)}")
